@@ -1,23 +1,22 @@
+import { BrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer";
+import router from "./router";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <section
-      style={{
-        paddingInline: "500px",
-        paddingBlock: "0",
-        minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: "100%",
-        gridTemplateRows: "120px 1fr 80px"
-      }}
-    >
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
+    <section className="container">
+      <section className="row">
+        <section className="col">
+          <Header />
+          <BrowserRouter>
+            <Main />
+          </BrowserRouter>
+          <Footer />
+        </section>
+      </section>
     </section>
   );
 }

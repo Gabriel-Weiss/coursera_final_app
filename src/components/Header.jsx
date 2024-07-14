@@ -3,20 +3,18 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <section
-      style={{
-        paddingInline: "100px",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center"
-      }}
-    >
-      <img
-        src="src/assets/Logo.svg"
-        alt="The official logo of the Little Lemon restaurant"
-      />
-      <Nav></Nav>
+    <section className="container">
+      <section className="row">
+        <section className="col">
+          <img
+            src="src/assets/Logo.svg"
+            alt="The official logo of the Little Lemon restaurant"
+          />
+        </section>
+        <section className="col">
+          <Nav></Nav>
+        </section>
+      </section>
     </section>
   );
 };
