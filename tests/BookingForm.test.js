@@ -13,7 +13,7 @@ test("Testing the initializeTimes function", () => {
   const date = new Date();
   const testTimes = fetchAPI(date);
 
-  const returnTimes = initializeTimes(date);
+  const returnTimes = initializeTimes();
   expect(returnTimes).toEqual(expect.arrayContaining(testTimes));
 });
 
